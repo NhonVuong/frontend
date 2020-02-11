@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <style>
+        tr {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $("td").click(function(){
+                $(this).css({
+                    "background-color":"blue"
+                })
+                $(this).css({
+                    "background-color":"red"
+                })
+            })
+            
+        })
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>asdfasfas</td>
+            <td>asdfasfas</td>
+            <td>asdfasfas</td>
+            <td>asdfasfas</td>
+            <td>asdfasfas</td>
+        </tr>
+        <tr>
+            <td>asdfasfas</td>
+            <td>asdfasfas</td>
+            <td>asdfasfas</td>
+            <td>asdfasfas</td>
+            <td>asdfasfas</td>
+        </tr>
+        <tr>
+            <td>asdfasfas</td>
+            <td>asdfasfas</td>
+            <td>asdfasfas</td>
+            <td>asdfasfas</td>
+            <td>asdfasfas</td>
+        </tr>
+    </table>
+</body>
+
+</html>

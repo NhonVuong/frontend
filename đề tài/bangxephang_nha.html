@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>bảng xếp hang NHA</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="font/css/fontawesome-all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <a href="#" name="dautrang"></a>
+    <div class="container-flug">
+        <div class="logo">
+            <img src="image/logo-hoi-thao-vns.jpg" style="width: 100px; float: left;" alt="">
+            <p class="tintuc">Tin tức bóng đá</p>
+            <div class="timkiem">
+                <form name="form3" action="trangchu.php" style="border: none;">
+                    <p id="timkiem"></p>
+                    <input type="submit" name="timkiem" id="inputsearch" onclick="return kiemtrasearch()" value="Tìm" style="background-color: orange; color: white; border-radius: 5px;">
+                    <span><input type="text" name="search" placeholder="Tìm kiếm" size="70" id="search"></span>
+                </form>
+            </div>
+        </div>
+        <div class="login">
+            <div id="dangky">
+                <button style="padding: 1px 12px;" onclick="dangky()">Đăng ký</button>
+            </div>
+            <div id="dangnhap">
+                <button onclick="dangnhap()">Đăng nhập</button>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <header>
+        <div class="header container-flug">
+            <div class="icon">
+                <a href=""><i class="fas fa-home"></i></a>
+            </div>
+
+            <div class="header-menu">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Việt Nam
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">V-League</a>
+                        <a class="dropdown-item" href="#">Đội tuyển Quốc Gia</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Anh
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Ngoại hạng Anh</a>
+                        <a class="dropdown-item" href="#">FA Cup</a>
+                        <a class="dropdown-item" href="#">Đội tuyển Anh</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Tây Ban Nha
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Laliga</a>
+                        <a class="dropdown-item" href="#">Cup Nhà Vua</a>
+                        <a class="dropdown-item" href="#">Dội tuyển Tây Ban Nha</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Đức
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Bundesliga</a>
+                        <a class="dropdown-item" href="#">Cúp Quốc Gia Đức</a>
+                        <a class="dropdown-item" href="#">Đội tuyển Đức</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Italia
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Serie A</a>
+                        <a class="dropdown-item" href="#">Coppa Italia</a>
+                        <a class="dropdown-item" href="#">Đội tuyển Italia</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Pháp
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Ligue 1</a>
+                        <a class="dropdown-item" href="#">Cúp Quốc Gia Pháp</a>
+                        <a class="dropdown-item" href="#">Đội tuyển Pháp</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="" style="color: white">Champions League</a>
+                    </button>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="" style="color: white">Europa League</a>
+                    </button>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="" style="color: white">World Cup 2018</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="clear"></div>
+
+    <div class="container">
+        <div id="trangdangky">
+            <form name="form1" action="trangchu.php" class="form">
+                <h3><b style="padding-left: 32%;">Đăng Ký</b></h3>
+                <p id="thongbao"></p>
+                <table>
+                    <tr>
+                        <td>Tên đăng nhập:</td>
+                        <td><input type="text" id="tendangnhap" name="tendangnhap" maxlength="30" size="35"></td>
+                    </tr>
+                    <tr>
+                        <td>Mật khẩu:</td>
+                        <td><input type="password" name="matkhau" id="matkhau" size="35"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" id="email" name="email" size="35"></td>
+                    </tr>
+                    <tr>
+                        <td>Nghề nghiệp:</td>
+                        <td>
+                            <select name="nghenghiep" id="nghenghiep">
+                                <option value="">Vui lòng chọn</option>
+                                <option value="">Kỹ sư</option>
+                                <option value="">Sinh viên</option>
+                                <option value="">Giảng viên</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Đăng ký" id="inputdangky" onclick="return kiemtrahople()">
+                <p style="margin-top: 14px;margin-left: 45px;">Bạn đã có tài khoản? Vui lòng click <a href="#" onclick="dangnhap()">Đăng
+                        nhập
+                    </a></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="trangdangnhap">
+            <form name="form2" action="trangchu.php" class="form">
+                <h3><b style="padding-left: 31%;">Đăng Nhập </b></h3>
+                <p id="thongbao1"></p>
+                <table>
+                    <tr>
+                        <td>Tên đăng nhập:</td>
+                        <td><input type="text" id="tendangnhap" name="tendangnhap" maxlength="30" size="35"></td>
+                    </tr>
+                    <tr>
+                        <td>Mật khẩu:</td>
+                        <td><input type="password" name="matkhau" id="mạthau" size="35"></td>
+                    </tr>
+                </table>
+                <p><a href="" style="color: black; padding-left: 35%;">Quên mật khẩu ?</a></p>
+                <input type="submit" value="Đăng nhập" id="inputdangnhap" onclick="return kiemtradangnhap()">
+                <p style="margin-top: 14px;margin-left: 45px;">Bạn chưa có tài khoản? Vui lòng click <a href="#" onclick="dangky()">Đăng
+                        ký
+                    </a></p>
+            </form>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="BXH">
+                <h4 style="margin-top: 10px;"><b>BẢNG XẾP HẠNG PREMIER LEAGUE</b></h4>
+                <table style="background-color: rgb(224, 247, 255); margin-bottom: 50px;">
+                    <tr>
+                        <th class="clb">Câu lạc bộ</th>
+                        <th>TĐ</th>
+                        <th>Thg</th>
+                        <th>Hoà</th>
+                        <th>Th</th>
+                        <th>BTg</th>
+                        <th>BTh</th>
+                        <th>HS</th>
+                        <th>Đ</th>
+                    </tr>
+                    <tr>
+                            <td class="clb">01.<img src="image/chelsea-fc-logo-DB8E73BE2D-seeklogo.com.png" style="width: 35px; margin:0 10px;"
+                                    alt=""><span> CHELSEA</span></td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>10</td>
+                            <td>3</td>
+                            <td>7</td>
+                            <td>12</td>
+                        </tr>
+                    <tr>
+                        <td class="clb">02.<img src="image/Liverpool_FC_logo.png" style="width: 35px; margin:0 10px;" alt=""><span>
+                            LIVERPOOL</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">03.<img src="image/tottenham-hotspur-logo-867FE9A18B-seeklogo.com.png" style="width: 22px; margin:0 16px;" alt=""><span>
+                                TOTTENNHAM HOTSPUR</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">04.<img src="image/410px-Manchester_City_FC_logo.svg.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> MANCHESTER CITY</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">05.<img src="image/manu.png" style="width: 40px; margin:0 7px;"
+                                alt=""><span> MANCHESTER UNITED</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">06.<img src="image/arsenal.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> ARSENAL</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">07.<img src="image/Watford.svg.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> WATFORD</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">08.<img src="image/leicester-city-fc-logo-png1.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> LEICESTER CITY</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">09.<img src="image/220px-Everton_FC_logo.svg.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> EVERTON</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">10.<img src="image/AfcBournemouth.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> BOURNEMOUTH</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">11.<img src="image/200px-Wolverhampton_Wanderers.svg.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> WOLVERHAMTON</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">12.<img src="image/1200px-FC_Southampton.svg.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> SOUTHAMTON</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">13.<img src="image/fulham.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> FULHAM</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">14.<img src="image/Brighton_&_Hove_Albion_logo.svg.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> BRIGHTON</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">15.<img src="image/Crystal_Palace_FC_logo.svg.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> CRYSTAL PALACE</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">16.<img src="image/Cardiff_City_crest.svg.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> CARDIFF CITY</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">17.<img src="image/Huddersfield_Town_A.F.C._logo.svg.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> HUDDERSFIELD TOWN</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">18.<img src="image/Newcastle_United_Logo.svg.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> NEWCASTLE UNITED</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">19.<img src="image/Burnley_F.C._Logo.svg.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> BURNLEY</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td class="clb">20.<img src="image/West_Ham_United_FC_logo.svg.png" style="width: 35px; margin:0 10px;"
+                                alt=""><span> WEST HAM UNITED</span></td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>10</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>12</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="thongtin"><p>Thông tin thêm</p></div>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="tong">
+                            <h6>Tin Tức</h6>
+                            <ul>
+                                <li><a href="">World Cup 2018</a></li>
+                                <li><a href="">Bóng đá Việt Nam</a></li>
+                                <li><a href="">Champions League</a></li>
+                                <li><a href="">Bóng đá Anh</a></li>
+                                <li><a href="">Bóng Đá TBN</a></li>
+                                <li><a href="">Bóng đá Italia</a></li>
+                                <li><a href="">Bóng Đá Đức</a></li>
+                                <li><a href="">Bóng đá Pháp</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="tong">
+                            <h6>Lịch Thi Đấu</h6>
+                            <ul>
+                                <li><a href="">V-League</a></li>
+                                <li><a href="">Premier League</a></li>
+                                <li><a href="">Laliga</a></li>
+                                <li><a href="">Bundesliga</a></li>
+                                <li><a href="">Serie a</a></li>
+                                <li><a href="">League 1</a></li>
+                                <li><a href="">Champions League</a></li>
+                                <li><a href="">Europa League</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="tong">
+                            <h6>Bảng Xếp Hạng</h6>
+                            <ul>
+                                <li><a href="">V-League</a></li>
+                                <li><a href="">Premier League</a></li>
+                                <li><a href="">Laliga</a></li>
+                                <li><a href="">Bundesliga</a></li>
+                                <li><a href="">Serie a</a></li>
+                                <li><a href="">League 1</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="tong">
+                            <h6>Video</h6>
+                            <ul>
+                                <li><a href="">Việt Nam</a></li>
+                                <li><a href="">Anh</a></li>
+                                <li><a href="">Tây Ban Nha</a></li>
+                                <li><a href="">Đức</a></li>
+                                <li><a href="">Italia</a></li>
+                                <li><a href="">Pháp</a></li>
+                                <li><a href="">Champions League</a></li>
+                                <li><a href="">Europa League</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="tong">
+                            <h6>Chuyên Đề</h6>
+                            <ul>
+                                <li><a href="">Chuyển nhượng</a></li>
+                                <li><a href="">Thể thao</a></li>
+                                <li><a href="">Điểm tin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="tong">
+                            <h6>Bóng đá</h6>
+                            <ul>
+                                <li><a href="">Đam mê</a></li>
+                                <li><a href="">Bạn đọc viết</a></li>
+                                <li><a href="">Nhận định bóng đá</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="container-flug">
+        <div class="last">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="image/logo-hoi-thao-vns.jpg" alt="" style="width: 100px; float: left;">
+                    <p class="tintuc tintuc_1">Tin tức bóng đá</p>
+                    <div class="clear"></div>
+                    <p style="margin-top: 20px;">Toàn bộ nội dung bài viết, ý kiến thành viên được kiểm duyệt, cung cấp và
+                        bảo trợ thông tin bởi <b> Báo Thể Thao Việt Nam – Cơ quan thuộc Tổng Cục Thể Dục Thể Thao.</b></p>
+                    <p>Giấy phép số 29/GP-TTĐT do Bộ Thông tin và Truyền thông cấp ngày 11/02/2010 và giấy phép số 88/GP-TTĐT
+                        của Sở Thông tin và Truyền thông TP.HCM cấp ngày 28/7/2015.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4>THÔNG TIN</h4>
+                    <p style="margin-top: 20px;"><b>TS.Nhà báo Võ Hoàng B-Trưởng chi nhánh Phía Nam</b></p>
+                    <p>Tổng Biên tập: <b>Nguyễn Văn A</b></p>
+                    <p>Phó tổng Biên tập: <b>Trần Văn B</b></p>
+                    <p>Chỉ đạo thực hiện: <b>Nguyễn Đức C</b></p>
+                    <p>Chịu trách nhiệm nội dung: Bà <b>Bạch Thị D</b></p>
+                </div>
+                <div class="col-lg-4">
+                    <h4>LIÊN HỆ</h4>
+                    <p style="margin-top: 20px;"><b>Địa chỉ: </b>02 Đinh Tiên Hoàng, P.Đa Kao, Q.1, TP.HCM.</p>
+                    <p><b>Điện thoại: </b>(08) 1234-5678.</p>
+                    <p><b>Fax: </b>(08) 5935-3487.</p>
+                    <p><b>Quảng cáo: </b>0909 90 90 90.</p>
+                    <p><b>Liên hệ quảng cáo: </b>quangcao@bongda.com.vn</p>
+                    <p><b>Toà soạn & hỗ trợ: </b>(08) 3497-8341.</p>
+                    <p><b>Email: </b>hotro@bongda.com.vn</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#dautrang" style="color: white;"><button class="top">^</button></a>
+
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="vendor/jquery-3.1.1.slim.min.js"></script>
+    <script src="vendor/tether.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+    <!-- Javascript -->
+    <script src="index.js"></script>
+    </body>
+
+</html>

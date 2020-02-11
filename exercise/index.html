@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+
+    <style>
+        input {
+            background-color: white;
+            border-bottom-color: red;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            outline: none;
+        }
+
+        button {
+            background-color: white;
+            color: green;
+            border-color: green;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("input").focus(function () {
+                $(this).css({
+                    "border-bottom-color": "blue"
+                })
+            })
+            $("input").blur(function () {
+                $(this).css({
+                    "border-bottom-color": "red"
+                })
+            })
+
+            $("#btn-gui").click(function () {
+
+                var ngaysinh = $("#ngaysinh").val()
+                var thangsinh = $("#thangsinh").val()
+                var namsinh = $("#namsinh").val()
+
+                var maxNgay = 0
+
+                if (ngaysinh != "" && thangsinh != "" && namsinh != "") {
+                    ngaysinh = parseInt(ngaysinh)
+                    thangsinh = parseInt(thangsinh)
+                    namsinh = parseInt(namsinh)
+
+                    if (namsinh > 1700) {
+                        if (thangsinh >= 1 && thangsinh <= 12) {
+                            if (thangsinh == 1 || thangsinh == 3 || thangsinh == 5 || thangsinh == 7 || thangsinh == 8 || thangsinh == 10 || thangsinh == 12) {
+                                maxNgay = 31
+                            } else if (thangsinh == 2) {
+                                maxNgay = 28
+                            } else {
+                                maxNgay = 30
+                            }
+
+                            if (ngaysinh >= 1 && ngaysinh <= maxNgay) {
+                                // dung
+                                // alert(`thong tin nguoi dung nhap la: ${ngaysinh}/${thangsinh}/${namsinh}`)
+                                alert("thong tin nguoi dung: "+ngaysinh+"/"+thangsinh+"/"+namsinh)
+
+                                // tinh tuoi
+                                var currentTime = new Date()
+                                console.log(currentTime)
+                                var ngayHT = currentTime.getDate()
+                                var thangHT = currentTime.getMonth()
+                                var namHT = currentTime.getFullYear()
+
+                                var tuoi = namHT - namsinh
+
+                                if ((thangsinh - 1 == thangHT && ngaysinh >= ngayHT) || thangsinh - 1 > thangHT) {
+                                    tuoi = tuoi - 1
+                                }
+                                alert(tuoi+" tuoi")
+                            }
+                        }
+                    }
+
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <!-- <form> -->
+    Ngay sinh:
+    <input type="number" id="ngaysinh" placeholder="Ngay sinh"> 
+    Thang sinh:
+    <input type="number" id="thangsinh" placeholder="Thang sinh">
+     Nam sinh:
+    <input type="number" id="namsinh" placeholder="Nam sinh">
+    <button id="btn-gui">Gui</button>
+    <!-- </form> -->
+</body>
+
+</html>

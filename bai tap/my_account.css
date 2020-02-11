@@ -1,0 +1,95 @@
+body {
+    background-color: white;
+}
+.clear {
+    clear: both;
+}
+a {
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+    color: rgb(233, 95, 3);
+}
+h5 {
+    text-transform: uppercase;
+}
+.container {
+    background-color: white;
+    padding: 0px;
+    /* padding-top: 20px; */
+}
+.main-content {
+    padding: 20px 15px;
+}
+.header-logo {
+    display: inline-block;
+    float: left;    
+}
+.header-menu {
+    float: left;
+}
+.dropdown-menu {
+    display: none;
+}
+.dropdown {
+    float: left;
+    margin-left: 25px;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.box{
+    float: right;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+.account-left {
+    float: left;
+    width: 545px;
+    padding: 20px;
+    border: 1px solid rgb(201, 201, 201);
+}
+.forget {
+    float: right;
+}
+.account-right {
+    float: left;
+    width: 545px;
+    padding: 20px;
+    border: 1px solid rgb(201, 201, 201);
+    margin-left: 50px;
+}
+#last {
+    background-color:  rgb(240, 239, 239);
+    margin: 0 auto;
+    margin-top: 40px;
+}
+#footer-top {
+    padding: 75px 75px;
+}
+.cen-1 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+.icon-bottom {
+    font-size: 25px;
+    padding-right: 10px;
+}
+.title {
+    padding-bottom: 10px;
+}
+.input {
+    margin-bottom: 20px;
+
+}
+.submit {
+    background-color: orange;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 12px 25px;
+    font-weight: bold;
+}

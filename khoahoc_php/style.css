@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    background-color: azure;
+}
+.clear {
+    clear: both;
+}
+.div_content {
+    margin: 0 auto;
+    width: 1170px;
+}
+.img {
+    float: left;
+}
+.content {
+    float: left;
+    padding: 0 10px;
+}
+h4 {
+    margin: 0;
+}
+.noidung {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+.div_noidung {
+    float: left;
+    background-color: lightgrey;
+    padding: 10px 0;
+    margin: 5px;
+}

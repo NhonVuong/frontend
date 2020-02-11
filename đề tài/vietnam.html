@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Việt Nam</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="font/css/fontawesome-all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container-flug">
+        <div class="logo">
+            <img src="image/logo-hoi-thao-vns.jpg" style="width: 100px; float: left;" alt="">
+            <p class="tintuc">Tin tức bóng đá</p>
+            <div class="timkiem">
+                <form name="form3" action="trangchu.php" style="border: none;">
+                    <p id="timkiem"></p>
+                    <input type="submit" name="timkiem" id="inputsearch" onclick="return kiemtrasearch()" value="Tìm" style="background-color: orange; color: white; border-radius: 5px;">
+                    <span><input type="text" name="search" placeholder="Tìm kiếm" size="70" id="search"></span>
+                </form>
+            </div>
+        </div>
+        <div class="login">
+            <div id="dangky">
+                <button style="padding: 1px 12px;" onclick="dangky()">Đăng ký</button>
+            </div>
+            <div id="dangnhap">
+                <button onclick="dangnhap()">Đăng nhập</button>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <header>
+        <div class="header container-flug">
+            <div class="icon">
+                <a href=""><i class="fas fa-home"></i></a>
+            </div>
+
+            <div class="header-menu">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Việt Nam
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">V-League</a>
+                        <a class="dropdown-item" href="#">Đội tuyển Quốc Gia</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Anh
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Ngoại hạng Anh</a>
+                        <a class="dropdown-item" href="#">FA Cup</a>
+                        <a class="dropdown-item" href="#">Đội tuyển Anh</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Tây Ban Nha
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Laliga</a>
+                        <a class="dropdown-item" href="#">Cup Nhà Vua</a>
+                        <a class="dropdown-item" href="#">Dội tuyển Tây Ban Nha</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Đức
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Bundesliga</a>
+                        <a class="dropdown-item" href="#">Cúp Quốc Gia Đức</a>
+                        <a class="dropdown-item" href="#">Đội tuyển Đức</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Italia
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Serie A</a>
+                        <a class="dropdown-item" href="#">Coppa Italia</a>
+                        <a class="dropdown-item" href="#">Đội tuyển Italia</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        Pháp
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Ligue 1</a>
+                        <a class="dropdown-item" href="#">Cúp Quốc Gia Pháp</a>
+                        <a class="dropdown-item" href="#">Đội tuyển Pháp</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="" style="color: white">Champions League</a>
+                    </button>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="" style="color: white">Europa League</a>
+                    </button>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="" style="color: white">World Cup 2018</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="clear"></div>
+
+    <div class="container">
+        <div id="trangdangky">
+            <form name="form1" action="trangchu.php" class="form">
+                <h3><b style="padding-left: 32%;">Đăng Ký</b></h3>
+                <p id="thongbao"></p>
+                <table>
+                    <tr>
+                        <td>Tên đăng nhập:</td>
+                        <td><input type="text" id="tendangnhap" name="tendangnhap" maxlength="30" size="35"></td>
+                    </tr>
+                    <tr>
+                        <td>Mật khẩu:</td>
+                        <td><input type="password" name="matkhau" id="matkhau" size="35"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" id="email" name="email" size="35"></td>
+                    </tr>
+                    <tr>
+                        <td>Nghề nghiệp:</td>
+                        <td>
+                            <select name="nghenghiep" id="nghenghiep">
+                                <option value="">Vui lòng chọn</option>
+                                <option value="">Kỹ sư</option>
+                                <option value="">Sinh viên</option>
+                                <option value="">Giảng viên</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Đăng ký" id="inputdangky" onclick="return kiemtrahople()">
+                <p style="margin-top: 14px;margin-left: 45px;">Bạn đã có tài khoản? Vui lòng click <a href="#" onclick="dangnhap()">Đăng
+                        nhập
+                    </a></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="trangdangnhap">
+            <form name="form2" action="trangchu.php" class="form">
+                <h3><b style="padding-left: 31%;">Đăng Nhập </b></h3>
+                <p id="thongbao1"></p>
+                <table>
+                    <tr>
+                        <td>Tên đăng nhập:</td>
+                        <td><input type="text" id="tendangnhap" name="tendangnhap" maxlength="30" size="35"></td>
+                    </tr>
+                    <tr>
+                        <td>Mật khẩu:</td>
+                        <td><input type="password" name="matkhau" id="mạthau" size="35"></td>
+                    </tr>
+                </table>
+                <p><a href="" style="color: black; padding-left: 35%;">Quên mật khẩu ?</a></p>
+                <input type="submit" value="Đăng nhập" id="inputdangnhap" onclick="return kiemtradangnhap()">
+                <p style="margin-top: 14px;margin-left: 45px;">Bạn chưa có tài khoản? Vui lòng click <a href="#" onclick="dangky()">Đăng
+                        ký
+                    </a></p>
+            </form>
+        </div>
+    </div>
+
+
+
+    <section>
+        <div class="noidung container">
+            <div class="left">
+                <h3>Việt Nam</h3>
+                <hr>
+                <div class="main">
+                    <div class="item1">
+                        <div class="noidung-left_1">
+                            <h4 style="color: orange">Bùng nổ: Công Phượng tỏa sáng ghi "bàn thắng vàng" cứu U23 Việt Nam</h4>
+                            <p><b> Công Phượng vào sân và đã ghi "bàn thắng vàng" ở phút 88 mang lại bàn mở tỷ số cho U23
+                                    VN.
+                                </b></p>
+                        </div>
+                        <div class="hinh_anh">
+                            <img src="image/Bung-no-Cong-Phuong-toa-sang-ghi-cp-3-1535034668-987-width660height440.jpg" alt="">
+                        </div>
+                        <div class="clear"></div>
+                        <div class="the-i"><i>Công Phượng toả sáng đúng lúc</i></div>
+                        <p>Công Phượng dĩ nhiên có khả năng tạo đột biến cao hơn và trong tính toán của HLV Park Hang Seo,
+                            dùng cậu học trò này vào thời điểm bế tắc sẽ phù hợp hơn.</p>
+                        <p>Khi U23 Việt Nam chơi hơn người từ 43 phút, hàng công hoạt động không hiệu quả, ông Park đã phải
+                            tính tung nhân sự mới vào sân. Thực thế cho thấy đối thủ nghiên cứu kĩ U23 Việt Nam và có đối
+                            sách phù hợp, khắc chế tốt hai ngôi sao lớn nhất: Văn Quyết và Quang Hải.</p>
+                        <p>Đến phút 65, khoảnh khắc bản lề của trận đấu, HLV Park Hang Seo quyết định tung Công Phượng vào
+                            thay Xuân Trường. Lúc này, hàng triệu người hâm mộ Việt Nam đều gửi trọn niềm tin vào Phượng.
+                            Có mặt trên sân, tiền đạo số 9 lập tức gây khó khăn cho hàng thủ Bahrain bằng tốc độ và kĩ thuật.
+                            Anh năng nổ và cũng phối hợp ăn ý với các đồng đội.</p>
+                        <p>Không phụ lòng tin của thầy Park và CĐV nhà, Công Phượng tỏa sáng đúng vào cuối trận. Một pha
+                            chạm bóng cảm giác và cú sút “cháy lưới” U23 Bahrain, bàn thắng vỡ òa. U23 Việt Nam “giải mã”
+                            đối thủ kịp thời, Công Phượng trở thành người hùng như thể nằm trong tính toán của HLV Park Hang
+                            Seo. Từ cú đá đầy sức mạnh ấy, có thể nhìn thấy một Công Phượng khao khát thế nào.</p>
+                        <p><b>Đá chính, hay dự bị khi gặp U23 Syria?</b></p>
+                        <p>Câu hỏi được nhiều người đặt ra lúc này là sau khi tỏa sáng, Công Phượng có trở lại đội hình chính
+                            của U23 Việt Nam ở cuộc đấu Syria vòng tứ kết hay không? Thực tế, trong 4 trận đã qua, Phượng
+                            chỉ ra sân từ đầu trong trận khai màn thắng U23 Pakistan 3-0 và anh cũng góp 1 bàn.</p>
+                        <p>3 liên tiếp sau, Công Phượng đều dự bị. Người lấy suất của Phượng là Văn Đức (ở trận gặp U23 Nepal
+                            và U23 Bahrain) và Văn Toàn (trận gặp U23 Nhật Bản). Dưới góc nhìn của giới chuyên môn, HLV Park
+                            Hang Seo muốn xoay tua khi chất lượng cầu thủ không quá xa nhau.</p>
+                        <div class="hinh_anh">
+                            <img src="image/Bung-no-Cong-Phuong-toa-sang-ghi-cp-3-1535034668-987-width660height440.jpg" alt="">
+                        </div>
+                        <div class="clear"></div>
+                        <div class="the-i"><i>Công Phượng toả sáng đúng lúc</i></div>
+                        <p>Một số khác cho rằng, Công Phượng mất suất vì chưa đảm bảo yêu cầu về chiến thuật. Thầy Park vốn
+                            rất nghiêm khắc trong vấn đề này và dù luôn khen Phượng tài năng, nhưng ông vẫn phải toan tính.
+                            Ngôi sao của HAGL xem ra khó lường hơn khi vào sân từ ghế dự bị.</p>
+                        <p>Ở giải U23 châu Á hồi đầu năm, Công Phượng cũng không phải là số 1. Anh phải chấp nhận hi sinh
+                            vì tập thể, di chuyển liên tục nhằm mở ra khoảng trống cho các đồng đội. Ông thầy người Hàn Quốc
+                            đã thuyết phục anh chơi hiệu quả và tham gia vào lối chơi chung nhiều hơn.</p>
+                        <p>Sự có mặt của Anh Đức và Văn Quyết tại ASIAD kì này khiến cho cơ hội đá chính của Công Phượng
+                            nhỏ đi. Dù sao việc đoán bắt đội hình của U23 Việt Nam không dễ bởi HLV Park Hang Seo luôn có
+                            những chiêu độc, khó lường.</p>
+                        <p>Công Phượng đá chính hay dự bị không quan trọng, miễn sao anh ghi dấu ấn khi U23 Việt Nam cần.</p>
+
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div>
+                    <div class="div_tieude">
+                        <p style="text-transform: uppercase; padding: 5px 10px;">Tin bài cùng sự kiện U23 Việt Nam</p>
+                    </div>
+                    <div class="main">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="content-right">
+                                    <img src="image/thay_park-width640height480.jpg" alt="" class="image">
+                                    <p class="content"><a href="">U23 Việt Nam: Thầy Park gây bất ngờ với Công Phượng & Xuân
+                                            Trường
+                                        </a></p>
+                                    <div class="clear"></div>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="content-right">
+                                    <img src="image/thay_park-width640height480.jpg" alt="" class="image">
+                                    <p class="content"><a href="">U23 Việt Nam: Thầy Park gây bất ngờ với Công Phượng & Xuân
+                                            Trường
+                                        </a></p>
+                                    <div class="clear"></div>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="content-right">
+                                    <img src="image/thay_park-width640height480.jpg" alt="" class="image">
+                                    <p class="content"><a href="">U23 Việt Nam: Thầy Park gây bất ngờ với Công Phượng & Xuân
+                                            Trường
+                                        </a></p>
+                                    <div class="clear"></div>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="content-right">
+                                    <img src="image/thay_park-width640height480.jpg" alt="" class="image">
+                                    <p class="content"><a href="">U23 Việt Nam: Thầy Park gây bất ngờ với Công Phượng & Xuân
+                                            Trường
+                                        </a></p>
+                                    <div class="clear"></div>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="content-right">
+                                    <img src="image/thay_park-width640height480.jpg" alt="" class="image">
+                                    <p class="content"><a href="">U23 Việt Nam: Thầy Park gây bất ngờ với Công Phượng & Xuân
+                                            Trường
+                                        </a></p>
+                                    <div class="clear"></div>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="content-right">
+                                    <img src="image/thay_park-width640height480.jpg" alt="" class="image">
+                                    <p class="content"><a href="">U23 Việt Nam: Thầy Park gây bất ngờ với Công Phượng & Xuân
+                                            Trường
+                                        </a></p>
+                                    <div class="clear"></div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="div_tieude">
+                        <p>
+                            <p style="text-transform: uppercase; padding: 5px 10px;">Các tin tức khác cùng chuyên mục</p>
+                        </p>
+                    </div>
+                    <div class="main">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="content-right-1">
+                                    <img src="image/1-width640height480 (1).jpg" alt="">
+                                    <p class="content-1"><a href="">Trực tiếp Newcastle - Chelsea: Công phá liên hồi, xà
+                                            ngang cứu nguy
+                                        </a></p>
+                                    <div class="clear"></div>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="content-right-1">
+                                    <img src="image/1-width640height480 (1).jpg" alt="">
+                                    <p class="content-1"><a href="">Trực tiếp Newcastle - Chelsea: Công phá liên hồi, xà
+                                            ngang cứu nguy
+                                        </a></p>
+                                    <div class="clear"></div>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="content-right-1">
+                                    <img src="image/1-width640height480 (1).jpg" alt="">
+                                    <p class="content-1"><a href="">Trực tiếp Newcastle - Chelsea: Công phá liên hồi, xà
+                                            ngang cứu nguy
+                                        </a></p>
+                                    <div class="clear"></div>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="content-right-1">
+                                    <img src="image/1-width640height480 (1).jpg" alt="">
+                                    <p class="content-1"><a href="">Trực tiếp Newcastle - Chelsea: Công phá liên hồi, xà
+                                            ngang cứu nguy
+                                        </a></p>
+                                    <div class="clear"></div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!-- <h3>Ligue 1</h3>
+        <hr>
+        <div class="main">
+          <div class="row">
+            <div class="item col-lg-6">
+              <img src="image/monaco1-310x165.jpg" alt="" style="width: 370px">
+              <div>
+                <h5><a href="" style="color: orange;">Tân vương PSG thua đau Monaco ngay trên sân nhà</a></h5>
+                <p>Nhà ĐKVĐ Ligue 1 PSG đã phải nhận thất bại 0-2 ngay trên sân nhà trước Monaco, qua đó có một ngày ra mắt
+                  ngôi vương đáng quên.</p>
+              </div>
+            </div>
+            <div class="item col-lg-6">
+              <div class="content-right">
+                <img src="image/neymar-877-thumbnail.jpg" alt="" class="image">
+                <p class="content"><a href="">PSG - Caen: Neymar "khai hỏa", nhận quà ngày ra quân</a></p>
+                <div class="clear"></div>
+              </div>
+              <div class="content-right">
+                <img src="image/neymar-877-thumbnail.jpg" alt="" class="image">
+                <p class="content"><a href="">PSG - Caen: Neymar "khai hỏa", nhận quà ngày ra quân</a></p>
+                <div class="clear"></div>
+              </div>
+              <div class="content-right">
+                <img src="image/neymar-877-thumbnail.jpg" alt="" class="image">
+                <p class="content"><a href="">PSG - Caen: Neymar "khai hỏa", nhận quà ngày ra quân</a></p>
+                <div class="clear"></div>
+              </div>
+              <div class="content-right">
+                <img src="image/neymar-877-thumbnail.jpg" alt="" class="image">
+                <p class="content"><a href="">PSG - Caen: Neymar "khai hỏa", nhận quà ngày ra quân</a></p>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+
+
+        <h3>Champions League</h3>
+        <hr>
+        <div class="main">
+          <div class="item1">
+            <img src="image/anh-chu-boc-tham-chia-bang-champions-league-310x165.jpg" alt="" style="width: 370px" class="img">
+            <div class="noidung-left">
+              <h5><a href="" style="color: orange;">Bốc thăm thử tứ kết Champions League: Real đụng Bayern, Barca đối đầu
+                  Man City cũ?
+                </a></h5>
+              <p>Theo kết quả, ĐKVĐ Barcelona có thể chạm trán Manchester City, trong khi Bayern Munich đụng Real Madrid.</p>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+          <div class="row">
+            <div class="item col-lg-6">
+              <div class="content-right">
+                <img src="image/640x480-1534146119-613-width640height480.jpg" alt="" class="image">
+                <p class="content"><a href="">Siêu cúp Real - Atletico: Trận chiến sinh tồn Bale & Dự án Galacticos...</a></p>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="item col-lg-6">
+              <div class="content-right">
+                <img src="image/640x480-1534146119-613-width640height480.jpg" alt="" class="image">
+                <p class="content"><a href="">Siêu cúp Real - Atletico: Trận chiến sinh tồn Bale & Dự án Galacticos...</a></p>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="item col-lg-6">
+              <div class="content-right">
+                <img src="image/640x480-1534146119-613-width640height480.jpg" alt="" class="image">
+                <p class="content"><a href="">Siêu cúp Real - Atletico: Trận chiến sinh tồn Bale & Dự án Galacticos...</a></p>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="item col-lg-6">
+              <div class="content-right">
+                <img src="image/640x480-1534146119-613-width640height480.jpg" alt="" class="image">
+                <p class="content"><a href="">Siêu cúp Real - Atletico: Trận chiến sinh tồn Bale & Dự án Galacticos...</a></p>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div> -->
+        </div>
+        <!-- <div class="clear"></div> -->
+
+
+        <div class="right">
+            <h6>Bóng đá Anh</h6>
+            <hr>
+            <div class="main-right">
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <h6>Bóng đá Tây Ban Nha</h6>
+            <hr>
+            <div class="main-right">
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <h6>Đức</h6>
+            <hr>
+            <div class="main-right">
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <h6>Italia</h6>
+            <hr>
+            <div class="main-right">
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <h6>Pháp</h6>
+            <hr>
+            <div class="main-right">
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+                <div class="noidung-right">
+                    <img src="image/england-kit-110x75.jpg" style="width: 90px; height: 60px;" alt="" class="image">
+                    <p class="div-right"><a href="">Bộ cánh của ĐT Anh ngày càng bắt mắt hơn qua các thời kì</a></p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div class="clear"></div>
+
+
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="vendor/jquery-3.1.1.slim.min.js"></script>
+    <script src="vendor/tether.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+    <!-- Javascript -->
+    <script src="index.js"></script>
+</body>
+
+</html>

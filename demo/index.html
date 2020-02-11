@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="lib/jquery/jquery.js"></script>
+
+    <script src="script_jquery.js"></script>
+
+</head>
+
+<body>
+    <!-- <table style="width: 100px;">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Points</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <p>This is a paragraph.</p>
+    <center><h1>This is a Heading</h1></center>
+    <p><a href="css_text.asp" style="text-decoration: none;">CSS text tutorial</a></p> -->
+    <!-- <p><a href="https://www.w3schools.com">W3Schools.com</a></p>
+    
+     <div class="collum">
+         <div class="col_3"></div>
+         <div class="col_3"></div>
+         <div class="col_3"></div>
+         <div class="col_3"></div>
+         <div class="col_5"></div>
+         <div class="col_6"></div>
+         <div class="col_7"></div>
+         <div class="col_8"></div>
+         <div class="col_9"></div>
+         <div class="col_10"></div>
+         <div class="col_11"></div>
+         <div class="col_12"></div>
+        
+
+     </div>
+     <div style="clear: both;"></div> -->
+    <!-- <input id="tendouong_input" type="text">
+     <button onclick="hienThiGiaTien()">Hien thi gia tien</button> -->
+
+    <!-- <input id="tinhDienTich" type="text">
+     <button onclick="dienTich()">Ket qua</button>
+     <p id="ketqua"></p> -->
+
+    Nhap chieu cao cua ban:
+    <br>
+    <input type="text" id="input_chieucao" value="123">
+    <br>
+    <button onclick="inChieuCao()">In chieu cao cua ban</button>
+
+    <br>
+    <br> Nhap vao mot so:
+    <br>
+    <input type="text" id="input_so">
+    <br>
+    <button onclick="inSo()">In ket qua</button>
+    <p id="p_ketqua"></p>
+
+    Nhap ten dien thoai:
+    <input type="text" name="" id="input_dienthoai">
+    <button onclick="themDienThoai()">Them</button>
+    <ul id="danhsach_dienthoai">
+
+    </ul>
+
+
+    1st Number:
+    <input type="text" id="input_number1"> 2nd Number:
+    <input type="text" id="input_number2">
+
+    <button onclick="inPhepNhan()">Multiply</button>
+    <button onclick="inPhepChia()">Devide</button>
+
+    <p id="ketqua"></p>
+
+    do F:
+    <input type="text" id="input_doF"> do C:
+    <input type="text" id="input_doC">
+
+    <button onclick="inDoC()">F->C</button>
+    <button onclick="inDoF()">C->F</button>
+
+    <p id="Ketqua"></p>
+    bai 12
+    <br> nhap so:
+    <input type="text" id="nhap_so">
+    <button onclick="Nhap_so()">Ket qua</button>
+    <p id="ketquagiamdan"></p>
+
+    bai 13
+    <br> so can nhap:
+    <input type="text" id="input_nhapso">
+
+    <button onclick="NhapSo()">Ket qua</button>
+    <p id="in_ket_qua"></p>
+
+    bai 14
+    <br> Nhap so:
+    <input type="text" id="socannhap">
+    <button onclick="nhapSo()">Ket qua</button>
+    <p id="ket_qua"></p>
+
+    bai 15
+    <br> Nhap so:
+    <input type="text" name="" id="hocsinh">
+    <button onclick="nhapDiem()">Kiem tra</button>
+    <p id="kiemtra"></p>
+
+    bai 16
+    <br> Nhap so:
+    <input type="text" id="nhapso">
+    <button onclick="Kiemtra()">Kiem tra</button>
+    <p id="Ket_qua"></p>
+
+    bai 17
+    <br> Nhap canh:
+    <input type="text" id="nhapcanh">
+    <button onclick="Canh()">Ket qua</button>
+    <p id="ket_Qua"></p>
+
+    bai 34
+    <br>
+    <input type="text" id="input_chuoi">
+    <button onclick="timChuoiDaiNhat()">In ket qua</button>
+    <p id="chuoi"></p>
+
+    bai 35
+    <br>
+    <input type="text" id="timnguyenam">
+    <button onclick="nguyenam()">ket qua</button>
+    <p id="nguyenam"></p>
+
+    bai 38
+    <br> Nhap so:
+    <input type="text" id="Timso">
+    <button onclick="mangcacso()">Ket qua</button>
+    <p id="demo"></p>
+
+    bai 39
+    <br> Nhap so:
+    <input type="text" id="timso">
+    <button onclick="nhapso()">Ket qua</button>
+    <p id="inso"></p>
+
+    bai 46
+    <br> nhap so:
+    <input type="text" id="input_socannhap">
+    <button onclick="Socannhap()">Ket qua</button>
+    <p id="hienthi"></p>
+
+    bai 47
+    <br> nhap so:
+    <input type="text" id="input_Socannhap">
+    <button onclick="sapxep()">ket qua</button>
+    <p id="so"></p>
+
+
+
+<!-- 
+    <input type="text" id="ten_nguoi">
+    <button id="btn_hienthi">Hien thi</button>
+    <p id="ket_qua_ten_nguoi"></p>
+
+    <p id="xinchao_1">xin chao cac ban 1</p>
+    <p id="xinchao_2">xin chao cac ban 2</p>
+    <button id="doimau_xinchao">doi mau</button>
+
+    bai 1
+    <br>
+    <h1>abc</h1>
+    <div>
+        <h1>div-1</h1>
+        <h1>div-2</h1>
+
+    </div>
+    <h1>xyz</h1>
+
+    bai 3
+    <br>
+    <form name='demo_form'>
+        First name:
+        <input type="text" name="fname">
+        <br> Last name:
+        <input type="text" name="lname">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    bai 4
+    <select id="myselect">
+        <option value="1">Option-1</option>
+        <option value="2">Option-2</option>
+        <option value="3">Option-3</option>
+    </select>
+    <br>
+    <br>
+    <!-- bai 5 -->
+    <br>
+    <form action="">
+        <input type="radio" name="sex" value="male">Male
+        <br>
+        <input type="radio" name="sex" value="female">Female
+    </form>
+
+
+
+    <!-- bai 6 -->
+    <!-- <div>
+        <h1>JQuery Core</h1>
+    </div> -->
+
+    <!-- bai 7, 8
+    <br>
+    <ul>
+        <li>Html Tutorial</li>
+        <li>Mongodb Tutorial</li>
+        <li>Python Tutorial</li>
+    </ul> -->
+
+
+
+    <!-- bai 11 -->
+    <!-- <p>jQuery Exercises</p>
+    <p>and Solution.</p> -->
+
+
+    <!-- <div id="bai11">
+        <p>Tieu de</p>
+        <div id="noidung">
+            <p>Noi dung bai 11</p>
+        </div>
+    </div>
+    <p>bai khac</p> -->
+
+    bai 16
+    <br>
+
+    <div id="div1" class="divclass"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+
+    bai 17
+    <br>
+    <p>Click me!</p>
+    <button id="doi_mau">doi mau</button>
+
+    bai 18
+    <br>
+    <p>Click me!</p>
+
+    bai 19
+    <br>
+    <form>
+        <input id="field1" type="text" value="Field 1">
+        <input id="field2" type="text" value="Field 2">
+    </form>
+
+    bai 20
+    <br>
+    <input type="text" id="input_text">
+    <p id="ketqua_text"></p>
+
+    bai 21
+    <br>
+    <h1>Heading-1</h1>
+    <h2>Heading-2</h2>
+    <h3>Heading-3</h3>
+
+
+    bai 22
+    <br>
+    <p>Double-click here to change the background color.</p>
+
+    bai 23
+    <br>
+    <p id="input_header">header</p>
+
+    <!-- bai 24
+    <br>
+    <ul>
+        <li>Html Tutorial</li>
+        <li>Mongodb Tutorial</li>
+        <li>Python Tutorial</li>
+    </ul> -->
+
+    bai 25
+    <br>
+    <div style="background-color:yellow">
+        <p>Click the button to change the background color of this paragraph.</p>
+        <button>Click me!</button>
+    </div>
+
+    bai 30
+    <br>
+    <h1>Heading1</h1>
+    <h2>Heading2</h2>
+    <p>Paragraph</p>
+    <button>Button</button>
+    <div id="log"></div>
+
+
+    bai 31
+    <br>
+    <!-- <h1>Heading1</h1>
+    <h2>Heading2</h2>
+    <p>Paragraph</p> -->
+    <button>Button</button>
+    <div id="log"></div>
+
+    bai 32
+    <br>
+    <h1>This is header1</h1>
+    <h1>This is another header1</h1>
+    <h2>This is header2</h2>
+    <h2>This is header3</h2>
+
+    bai 33
+    <br> Input your name:
+    <br>
+    <input type=”text” id="box">
+    <div></div>
+    <input type="text" id="textbox">
+    <br>
+    <br>
+    <br>
+    
+    bai 34
+    <br>
+    <p>
+        <input type="text">
+        <span>Input your first name</span>
+    </p>
+    <p>
+        <input type="text">
+        <span>Input your last name</span>
+    </p>
+
+    bai 37
+    <br>
+    <div>
+        <p>click vao day</p>
+        First name: <input type="text"><br>
+        Last name: <input type="text">
+    </div>
+       
+
+
+    <br> 
+    
+    bai 39
+    <br>
+    <ul>
+        <li>List - 1</li>
+        <li>List - 2</li>
+        <li>List - 3</li>
+    </ul>
+    <button>Display the number of li elements in console</button>
+
+
+    <br>
+    bai 40<br>
+    <p>adsgffdhfgj</p>
+
+    bai 41<br>
+    <p>Press mouse and release here.</p>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body> -->
+
+<script src="script.js"></script>
+
+</html>

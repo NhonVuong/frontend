@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đồng hồ javascript</title>
+</head>
+
+<body>
+    <form name="form1" style="text-align: center">
+        <input type="text" name="dongho" id="dongho" style="font-size: 30px; padding-left: 100px;">
+    </form>
+    <div style="text-align: center; margin-top: 10px;">
+        <button id="Stop" onclick="clickStop(b)">Stop</button>
+        <button id="Start" onclick="setInterval(HamThoiGian, a)">Start</button>
+    </div>
+
+    <script>
+        function HamThoiGian() {
+            var ThoiGian = new Date();
+            var Gio = ThoiGian.getHours();
+            var Phut = ThoiGian.getMinutes();
+            var Giay = ThoiGian.getSeconds();
+            if (Gio < 10) {
+                Gio = "0" + Gio;
+            }
+            if (Phut < 10) {
+                Phut = "0" + Phut;
+            }
+            if (Giay < 10) {
+                Giay = "0" + Giay;
+            }
+            var dongho = document.getElementById("dongho").value = "Bây giờ là: " + Gio + ":" + Phut + ":" + Giay;
+            // form1.dongho.value = "Bây giờ là: " + Gio + ":" + Phut + ":" + Giay;
+        }
+        var a = setInterval(HamThoiGian, 1000); // Sử dụng setInterval để gọi lặp đi lặp lại hàm ThoiGian sau 1 giây.
+
+        function clickStop(){
+            var stop = document.getElementById("Stop");
+            if(stop.click){
+                var b = clearInterval(setInterval(HamThoiGian, 1000));
+            }
+        }
+        
+
+
+    </script>
+
+</body>
+
+</html>

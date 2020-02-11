@@ -1,0 +1,140 @@
+body{
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left; 
+}
+a:link {
+    background-color: lightblue;
+}
+a:visited {
+    background-color: lightblue;
+}
+a:hover {
+    background-color: yellow;
+}
+a:active {
+    background-color: yellow;
+}
+.collum {
+    margin: 0 auto;
+    width: 700px;
+    background-color: rgb(226, 222, 222);
+}
+[class*="col_"]{
+    float: left;
+    box-sizing: border-box;
+}
+.col_1 {
+    
+    width: calc(1 / 12 *100%);
+    height: 200px;
+}
+.col_2 {
+    
+    width: calc(2 / 12 *100%);
+    height: 200px;
+}
+.col_3 {
+    
+    width: calc(3 / 12 *100%);
+    height: 200px;
+}
+.col_4 {
+    
+    width: calc(4 / 12 *100%);
+    height: 200px;
+}
+.col_5 {
+    
+    width: calc(5 / 12 *100%);
+    height: 200px;
+}
+.col_6 {
+    
+    width: calc(6 / 12 *100%);
+    height: 200px;
+}
+.col_7 {
+    
+    width: calc(7 / 12 *100%);
+    height: 200px;
+}
+.col_8 {
+    
+    width: calc(8 / 12 *100%);
+    height: 200px;
+}
+.col_9 {
+    
+    width: calc(9 / 12 *100%);
+    height: 200px;
+}
+.col_10 {
+   
+    width: calc(10 / 12 *100%);
+    height: 200px;
+}
+.col_11 {
+    
+    width: calc(11 / 12 *100%);
+    height: 200px;
+}
+
+.col_12 {
+    
+    width: calc(12 / 12 *100%);
+    height: 200px;
+}
+.bg-red {
+    background-color: red;
+}
+.bg-blue {
+    background-color: blue;
+}
+.bg-green {
+    background-color: green;
+}
+.bg-pink {
+    background-color: pink;
+}
+.bg-yellow {
+    background-color: yellow;
+}
+.bg-orange {
+    background-color: orange;
+}
+
+
+
+/* p {
+    background-color: red
+} */
+
+#xinchao_1 {
+    color: green
+}
+#xinchao_2 {
+    
+}
+
+/* .myclass{
+    color: red;
+    font-size: 20px;
+} */
+
+.color-blue {
+    color: blue;
+}
+
+.display {
+    display: none;
+}

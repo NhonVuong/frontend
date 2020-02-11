@@ -1,0 +1,321 @@
+body {
+	margin: 0px;
+	background-image: url(file:///E|/Nh%C6%A1n/%E1%BA%A3nh/Fernando%20Torres.jpg);
+}
+.wrapper {
+	width: 990px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-color: #FFF;
+}
+.banner {
+	height: 150px;
+	width: 990px;
+}
+.mainmenu {
+	height: 30px;
+	width: 990px;
+	padding-left: 47px;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.box {
+	width: 200px;
+	margin-bottom: 10px;
+}
+.box_top {
+	background-color: #09F;
+	width: 200px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #FFF;
+	text-align: center;
+	height: 30px;
+}
+.formselec {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #06C;
+	border: 1px solid #09C;
+	width: 150px;
+	padding: 0px;
+	margin: 5px;
+}
+.hotro {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: center;
+	padding: 5px;
+	font-weight: bold;
+	color: #09C;
+}
+.website {
+	text-align: center;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+	line-height: 20px;
+}
+
+
+
+.box_cen {
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #09C;
+	border-bottom-color: #09C;
+	border-left-color: #09C;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	margin: 0px;
+	padding: 0px;
+}
+.formtimkiem {
+	text-align: center;
+	margin: 0px;
+	padding: 10px;
+}
+
+
+
+
+.slideshow {
+	height: 260px;
+	width: 990px;
+}
+.content {
+	width: 990px;
+	margin-top: 10px;
+}
+.sidebarleft {
+	float: left;
+	width: 200px;
+}
+.sidebarright {
+	float: left;
+	width: 200px;
+	margin-left: 10px;
+}
+
+.sidebarcenter {
+	float: left;
+	width: 570px;
+	margin-left: 10px;
+}
+
+.sanpham {
+	width: 570px;
+	margin-bottom: 25px;
+}
+.nutlienhe {
+	text-align: center;
+	width: 530px;
+	margin-bottom: 5px;
+}
+
+.itemplist {
+	list-style-image: url(file:///E|/Nh%C6%A1n/Web/Tuan-03-Kien-Thuc-Web-Co-Ban_2/Tuan-3-Kien-Thuc-Web-Co-Ban/Bai-40/hinh_login/arrow-list.gif);
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #009;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	list-style-position: inside;
+	line-height: 20px;
+}
+.linkmau a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #00C;
+	text-decoration: none;
+}
+
+.linkmau a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #00C;
+	text-decoration: none;
+}
+.linkmau a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #F00;
+	text-decoration: underline;
+}
+.formlogin {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+
+
+
+
+
+
+.sanpham_top {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #09F;
+	text-align: center;
+	height: 30px;
+	width: 570px;
+	text-transform: uppercase;
+}
+.username {
+	background-image: url(file:///E|/Nh%C6%A1n/Web/Tuan-03-Kien-Thuc-Web-Co-Ban_2/Tuan-3-Kien-Thuc-Web-Co-Ban/Bai-40/hinh_login/username.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	padding-left: 20px;
+	padding-right: 0px;
+	width: 150px;
+}
+.nutdangnhap {
+	text-align: center;
+}
+
+.password {
+	background-image: url(file:///E|/Nh%C6%A1n/Web/Tuan-03-Kien-Thuc-Web-Co-Ban_2/Tuan-3-Kien-Thuc-Web-Co-Ban/Bai-40/hinh_login/password.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	padding-left: 20px;
+	margin-right: 10px;
+	width: 150px;
+}
+.giohang {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	padding: 5px;
+}
+.dodam {
+	font-weight: bold;
+	color: #F00;
+}
+.dendam {
+	font-weight: bold;
+	color: #03C;
+}
+
+
+
+
+
+
+.sanpham_cen {
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #09C;
+	border-bottom-color: #09C;
+	border-left-color: #09C;
+	padding-left: 6px;
+	overflow: hidden;
+}
+.sanpham_box {
+	padding-top: 0px;
+	float: left;
+	/*height: 230px;*/
+	width: 170px;
+	margin-right: 10px;
+	border: 1px solid #09C;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: center;
+	background-color: #FFF;
+	line-height: 20px;
+	font-weight: bold;
+	margin-left: 5px;
+	padding-bottom: 0px;
+	height: auto;
+}
+
+
+
+
+.footer {
+	height: 95px;
+	width: 990px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	text-align: center;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #09F;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+.clear {
+	clear: both;
+}
+.col_left {
+	float: left;
+	width: 95px;
+	padding-right: 5px;
+	margin-left: 15px;
+	text-align: right;
+}
+.col_right {
+	float: left;
+	width: 430px;
+	margin-bottom: 5px;
+}
+.canhlehinhanh {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	padding: 0px;
+}
+
+.linkmauden a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #000;
+	text-decoration: none;
+	font-weight: bold;
+}
+.linkmauden a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #00C;
+	text-decoration: none;
+}
+.linkmauden a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #F00;
+	text-decoration: underline;
+	font-weight: bold;
+}
